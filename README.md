@@ -1,2 +1,5 @@
-# Playwright-Automation
-A Playwright-based automation framework for efficient, end-to-end testing of web applications. This repository offers modular, reusable scripts for fast, reliable, and cross-browser testing.
+
+#PlaywrightAutomation
+
+A comprehensive automation framework using Playwright for end-to-end testing of web applications. 
+This repository contains modular and reusable scripts designed to interact with various web applications, providing a fast, reliable, and cross-browser testing solution.
