@@ -7,7 +7,7 @@ public class login_to_Application
 {
     public static void main(String[] args) {
         Playwright pw = Playwright.create();
-        Browser brw = pw.firefox().launch(
+        Browser brw = pw.webkit().launch(
                 new BrowserType.LaunchOptions().setHeadless(false)
         );
         Page pg = brw.newPage();
