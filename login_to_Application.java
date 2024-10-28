@@ -20,7 +20,7 @@ public class login_to_Application
         pg.getByPlaceholder("E-Mail Address").type("amotooricap8@gmail.com");
         pg.getByPlaceholder("Password").type("12345");
         pg.locator("//*[@value='Login']").click();
-        assertThat(pg).hasTitle("My Account12");
+        assertThat(pg).hasTitle("My Account");
         pg.close();
         brw.close();
         pw.close();
