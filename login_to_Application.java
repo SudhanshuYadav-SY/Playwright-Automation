@@ -5,10 +5,9 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 
 public class login_to_Application
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Playwright pw = Playwright.create();
-        Browser brw = pw.chromium().launch(
+        Browser brw = pw.firefox().launch(
                 new BrowserType.LaunchOptions().setHeadless(false)
         );
         Page pg = brw.newPage();
