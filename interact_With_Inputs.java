@@ -15,10 +15,10 @@ public class interact_With_Inputs
         );
         Page pg = brw.newPage();
         pg.navigate("https://www.lambdatest.com/selenium-playground/simple-form-demo");
-        pg.locator("#user-message").fill("Hello I am Sudhanshu Yadav");
+        pg.locator("input#user-message").fill("Hello I am Sudhanshu Yadav And We are Learning Playwright Automation");
         pg.locator("id=showInput").click();
-        String  context = pg.locator("id = message").textContent();
-        System.out.println("Message You Typed was : "+context);
+        String  context = pg.locator("#message").textContent();
+        System.out.println("You just wrote : "+context);
         pg.close();
         brw.close();
         pw.close();
