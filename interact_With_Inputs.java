@@ -4,7 +4,7 @@ import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
-
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.*;
 public class interact_With_Inputs
 {
     public static void main(String[] args)
@@ -17,8 +17,7 @@ public class interact_With_Inputs
         pg.navigate("https://www.lambdatest.com/selenium-playground/simple-form-demo");
         pg.locator("input#user-message").fill("Hello I am Sudhanshu Yadav And We are Learning Playwright Automation");
         pg.locator("id=showInput").click();
-        String  context = pg.locator("#message").textContent();
-        System.out.println("You just wrote : "+context);
+        assertThat(pg.locator("#message")).hasText("Hello I am Sudhanshu Yadav And We are Learning Playwright Automation");
         pg.close();
         brw.close();
         pw.close();
