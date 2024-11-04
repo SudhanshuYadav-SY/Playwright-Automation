@@ -1,6 +1,8 @@
 package day4;
 
 import com.microsoft.playwright.*;
+import com.microsoft.playwright.options.SelectOption;
+
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class Handle_Drop_Downs
@@ -14,8 +16,8 @@ public class Handle_Drop_Downs
         Page pg = brw.newPage();
         pg.navigate("https://www.lambdatest.com/selenium-playground/select-dropdown-demo");
         Locator loc = pg.locator("select#select-demo");
-        loc.selectOption("Monday");                         //Here, we use value to select dropdown
-        assertThat(pg.locator("p.selected-value")).containsText("Monday");
+        loc.selectOption(new SelectOption().setValue("Friday"));
+        assertThat(pg.locator("p.selected-value")).containsText("Friday");
         pg.close();
         brw.close();
         pw.close();
